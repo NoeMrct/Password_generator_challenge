@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Password Generator - by Noé Mercourt</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div class="title">
+          <h1>Generate password</h1>
+        </div>
+        <div class="password_block_container">
+          <span>Generated Password</span>
+          <div class="password_block">
+            <h2 onclick="getPassword(this)" id="password">Password</h2>
+          </div>
+        </div>
+
+        <div class="length_block_container">
+          <span>Length: <span id="lengthValue">8</span></span>
+
+          <div class="length_block">
+            <span>1</span>
+            <input
+              id="length"
+              type="range"
+              min="1"
+              max="16"
+              value="8"
+              step="1"
+              onchange="changeLength()"
+              class="length"
+            />
+            <span>16</span>
+          </div>
+        </div>
+
+        <div class="settings_block_container">
+          <span>Settings</span>
+          <div class="settings_block">
+            <span>Include numbers</span>
+            <label class="switch">
+              <input id="numbers" type="checkbox" checked />
+              <span></span>
+            </label>
+          </div>
+
+          <div class="settings_block">
+            <span>Include uppercase letters</span>
+            <label class="switch">
+              <input id="uppercase" type="checkbox" checked />
+              <span></span>
+            </label>
+          </div>
+
+          <div class="settings_block">
+            <span>Include lowercase letters</span>
+            <label class="switch">
+              <input id="lowercase" type="checkbox" checked />
+              <span></span>
+            </label>
+          </div>
+
+          <div class="settings_block">
+            <span>Include symbols</span>
+            <label class="switch">
+              <input id="symbols" type="checkbox" />
+              <span></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="button_block">
+          <button class="button" onclick="generatePassword()">
+            Generate password
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

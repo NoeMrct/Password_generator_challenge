@@ -1,0 +1,216 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: #fafafa;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Eudoxus;
+  src: url("../fonts/EudoxusSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: Jakarta;
+  src: url("../fonts/PlusJakartaText-Regular.otf");
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  width: 450px;
+  border-radius: 35px;
+  background-color: #040f2d;
+  filter: drop-shadow(0 0 0.5rem #030a1e);
+}
+
+.title h1 {
+  font-size: 1.65em;
+  color: #f4f4f4;
+  font-family: Jakarta;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.password_block_container,
+.length_block_container,
+.settings_block_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  background-color: #040f2d;
+  margin-bottom: 20px;
+}
+
+.password_block_container > span,
+.length_block_container > span,
+.settings_block_container > span {
+  text-align: left;
+  width: 90%;
+  color: #525f88;
+  margin-bottom: 6px;
+  margin-left: 15px;
+  font-family: Eudoxus;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+
+.password_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #02103f;
+}
+
+.password_block h2 {
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+.length_block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #02103f;
+}
+
+.length_block input {
+  cursor: pointer;
+  height: 2px;
+  width: 100%;
+}
+
+.settings_block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #02103f;
+  margin-bottom: 8px;
+}
+
+.length_block span,
+.settings_block > span {
+  margin: 0px 17px;
+  color: #f4f4f4;
+  font-size: 0.85em;
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 45px;
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.switch input {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 0;
+  height: 0;
+}
+
+.switch input + span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0c1f4b;
+  border-radius: 20px;
+}
+
+.switch input:checked + span {
+  background: #346abf;
+}
+
+.switch input + span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+}
+
+.switch input:checked + span:before {
+  left: 25px;
+}
+
+.button_block {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.button_block button {
+  width: 90%;
+  height: 50px;
+  border-radius: 10px;
+  border-width: 0px;
+  background: linear-gradient(45deg, #2a5ff0, #0e7bf6);
+  text-transform: uppercase;
+  color: #f4f4f4;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
